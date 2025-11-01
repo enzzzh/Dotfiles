@@ -1,0 +1,42 @@
+[global]
+
+
+#Location
+geometry = "320x5-20+20"  
+
+
+corner_radius = 8      
+frame_width = 2    
+
+# Spacing
+padding = 10             
+horizontal_padding = 12  
+# Font
+font = FiraCode Nerd Font 10
+line_height = 0           
+separator_height = 0  
+
+# Notification life span
+timeout = 5                # Default timeout in seconds
+
+# Follow the cursor if it moves to a different monitor
+follow = mouse
+
+
+[urgency_low]
+background = "#282828D9" 
+foreground = "#FBF1C7"  
+frame_color = "#EBDBB2" 
+timeout = 5
+
+[urgency_normal]
+background = "#282828D9" 
+foreground = "#EBDBB2"  
+frame_color = "#EBDBB2"  
+timeout = 10
+
+[urgency_critical]
+background = "#CC241D99"
+foreground = "#FBF1C7" 
+frame_color = "#FBF1C7" 
+timeout = 0              

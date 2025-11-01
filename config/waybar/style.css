@@ -1,0 +1,70 @@
+/* -------------------------------------------------------------------------- */
+/* WAYBAR STYLE                               */
+/* -------------------------------------------------------------------------- */
+
+* {
+    /* Define a standard font and size */
+    font-family: sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* Base Bar Styling: Floating, Rounded, Semi-Transparent */
+#waybar {
+    /* Main background color - Dark Grey */
+    background: rgba(30, 30, 30, 0.8);
+    
+    /* Make the bar floating by adding margins (adjust as needed) */
+    margin: 5px 10px 0px 10px; 
+
+    /* Rounded corners for a sleek, floating look */
+    border-radius: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* MODULE STYLING                              */
+/* -------------------------------------------------------------------------- */
+
+/* General Module Padding and Spacing */
+#workspaces button,
+#clock,
+#network,
+#bluetooth,
+#battery,
+#tray {
+    /* Padding to separate text/icons from the module edge */
+    padding: 0 10px;
+    
+    /* Inherit the grey background */
+    background-color: transparent;
+    
+    /* Set text color to a light-off white */
+    color: #e0e0e0; 
+}
+
+/* Icon Colors (for specific modules for visual feedback) */
+#battery.charging, #battery.fully-charged, #network.connected, #bluetooth.connected {
+    color: #8be9fd; /* Light Cyan for good status */
+}
+
+/* Warning/Error Colors */
+#battery.warning,
+#battery.critical,
+#network.disconnected {
+    color: #ff5555; /* Red for alerts */
+}
+
+/* Tray Module (System Icons) */
+#tray {
+    /* Specific padding adjustments for the tray if needed */
+    padding-right: 15px;
+}
+
+/* Ensure Tray Icons have a proper background (optional) */
+#tray > .passive {
+    -gtk-icon-effect: none;
+}
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #ff5555;
+}
